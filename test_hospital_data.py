@@ -2,7 +2,7 @@ import pandas as pd
 
 
 # Load the data
-diagnosis_data = r'.\data-non-errors.csv'
+diagnosis_data = r'data-non-errors.csv'
 df = pd.read_csv(diagnosis_data)
 
 def test_balance_amount():
@@ -39,3 +39,4 @@ def test_patient_name_special_characters():
     # Check for special characters in patient names
     special_characters = ['$', '@', '%', '#']
     assert any(df['PATIENT_NAME'].str.contains(char).any() for char in special_characters)
+
