@@ -2,7 +2,7 @@ import pandas as pd
 import unittest
 
 
-diagnosis_data = r'.\Diagnosis_Dataset\Diagnosis_Data.csv'
+diagnosis_data = r'.\Diagnosis_Data.csv'
 
 df = pd.read_csv(diagnosis_data)
 
@@ -49,3 +49,4 @@ class TestDataValidation(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
