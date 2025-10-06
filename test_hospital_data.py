@@ -1,5 +1,5 @@
 import pandas as pd
-
+import pytest
 
 # Load the data
 diagnosis_data = r'data-non-errors.csv'
@@ -39,4 +39,8 @@ def test_patient_name_special_characters():
     # Check for special characters in patient names
     special_characters = ['$', '@', '%', '#']
     assert any(df['PATIENT_NAME'].str.contains(char).any() for char in special_characters)
+    
+if __name__ == '__main__':
+    pytest.main(["-v", "--tb=short"])
+
 
